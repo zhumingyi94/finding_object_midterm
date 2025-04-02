@@ -69,9 +69,7 @@ def linear_multiscale_template_matching(image, templates, scale_range=(0.5, 1.0)
     
     match_locations = []
     
-    # Chuẩn bị ảnh cho template matching
-    # Nếu ảnh đầu vào là ảnh màu (3 kênh) và templates là ảnh nhị phân (1 kênh),
-    # chuyển đổi ảnh sang ảnh xám để tương thích với templates
+   
     if len(image.shape) == 3 and templates and len(templates[0].shape) == 2:
         image_for_matching = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     else:

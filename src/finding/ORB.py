@@ -41,9 +41,9 @@ def orb_detect_and_visualize_matches(
     if len(image.shape) != 3:
         print("Cảnh báo: Ảnh đầu vào không phải BGR. Vẽ có thể không như ý.")
         image_color_for_drawing = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
-        image_gray = image # Giả sử đầu vào là gray
+        image_gray = image
     else:
-        image_color_for_drawing = image.copy() # Dùng bản sao màu để vẽ
+        image_color_for_drawing = image.copy()
         image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     try:
@@ -66,7 +66,7 @@ def orb_detect_and_visualize_matches(
         if len(template.shape) != 3:
             print(f"Cảnh báo: Template {template_idx} không phải BGR. Chuyển đổi tạm.")
             template_color_for_drawing = cv2.cvtColor(template, cv2.COLOR_GRAY2BGR)
-            template_gray = template # Giả sử template gốc là gray
+            template_gray = template
         else:
             template_color_for_drawing = template.copy()
             template_gray = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
@@ -94,7 +94,6 @@ def orb_detect_and_visualize_matches(
         good_matches = []
         if raw_matches:
             for match_pair in raw_matches:
-                # Cẩn thận kiểm tra nếu knnMatch trả về ít hơn 2 kết quả cho 1 điểm
                 if len(match_pair) == 2:
                     m, n = match_pair
                     if m.distance < ratio_test_thresh * n.distance:
@@ -108,10 +107,9 @@ def orb_detect_and_visualize_matches(
             img_matches = cv2.drawMatches(
                 template_color_for_drawing, kp_template,
                 image_color_for_drawing, kp_image,
-                good_matches, # Chỉ vẽ các cặp khớp tốt
-                None,         # Để OpenCV tự tạo ảnh đầu ra
+                good_matches,
+                None,
                 flags=draw_match_flags
-                # Có thể thêm matchColor=(0,255,0) nếu muốn đường nối màu xanh
             )
             match_visualization_images.append(img_matches)
             match_summary.append({
@@ -122,5 +120,4 @@ def orb_detect_and_visualize_matches(
             })
 
 
-    print(f"Hoàn thành xử lý. Tạo được {len(match_visualization_images)} ảnh trực quan.")
     return match_visualization_images, match_summary
