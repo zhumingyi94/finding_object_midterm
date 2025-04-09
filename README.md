@@ -12,7 +12,7 @@ Repository này chứa mã nguồn và báo cáo cho bài thực hành môn Xử
 [source: 3] Mục tiêu là xác định vị trí của 15 vật thể được giấu trong ảnh `finding_01.jpg` (xem trong thư mục `data/images/`).
 
 ## Cấu trúc Thư mục
-
+```text
 .
 ├── data/                  # Thư mục chứa dữ liệu
 │   ├── ground_truth/      # Chứa file XML chú thích vị trí thực (ground truth) [source: 5, 6]
@@ -37,7 +37,7 @@ Repository này chứa mã nguồn và báo cáo cho bài thực hành môn Xử
 │       └── visualization.py # Vẽ kết quả (bounding box,...)
 ├── README.md              # File này
 └── requirements.txt       # Các thư viện Python cần thiết
-
+```
 
 ## Phương pháp
 
