@@ -1,7 +1,6 @@
 # Báo cáo Thực hành Xử lý Ảnh: Xác định Vật thể bằng Template Matching
 
-**Tác giả:** Đỗ Minh Nhật (22022537)
-**GitHub Repository:** https://github.com/zhumingyi94/finding_object_midterm
+**Sinh viên:** Đỗ Minh Nhật (22022537)
 
 ## Giới thiệu
 
@@ -15,12 +14,12 @@ Repository này chứa mã nguồn và báo cáo cho bài thực hành môn Xử
 ```text
 .
 ├── data/                  # Thư mục chứa dữ liệu
-│   ├── ground_truth/      # Chứa file XML chú thích vị trí thực (ground truth) [source: 5, 6]
+│   ├── ground_truth/      # Chứa file XML chú thích vị trí thực (ground truth)
 │   │   └── finding_01.xml
-│   ├── images/            # Chứa ảnh đầu vào [source: 7]
+│   ├── images/            # Chứa ảnh đầu vào
 │   │   └── finding_01.jpg
-│   └── templates/         # Chứa ảnh mẫu (template) [source: 8]
-│       └── finding_01/    # Template cho ảnh finding_01 [source: 9]
+│   └── templates/         # Chứa ảnh mẫu (template)
+│       └── finding_01/    # Template cho ảnh finding_01
 │           ├── balloon.png
 │           ├── bow_tie.png
 │           ├── car.png
