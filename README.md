@@ -50,7 +50,7 @@ Dự án này chủ yếu sử dụng kỹ thuật **Template Matching** để �
 
 * Các phương pháp Template Matching **chuẩn hóa** (`NORMED`), đặc biệt là `cv2.TM_CCORR_NORMED` và `cv2.TM_CCOEFF_NORMED`, cho kết quả tốt hơn đáng kể so với các phương pháp không chuẩn hóa, vì chúng có khả năng chống chịu tốt hơn với sự thay đổi về điều kiện ánh sáng và độ tương phản.
 * Phương pháp `cv2.TM_CCORR_NORMED` được đánh giá là đáng tin cậy nhờ khả năng chống chịu thay đổi độ sáng/tương phản và thang đo tương đồng rõ ràng ([0, 1] hoặc [-1, 1]), giúp dễ đặt ngưỡng phát hiện.
-* Mặc dù `cv2.TM_CCOEFF_NORMED` là phương pháp mạnh nhất được thử nghiệm, kết quả vẫn còn hạn chế. [source: 61, 62] Thuật toán gặp khó khăn trong việc phát hiện một số đối tượng, ví dụ như quả bóng bay màu đỏ, có thể do màu sắc tương đồng với nền hoặc sự thay đổi về góc nhìn/kích thước không nằm trong dải tỉ lệ thử nghiệm.
+* Mặc dù `cv2.TM_CCOEFF_NORMED` là phương pháp mạnh nhất được thử nghiệm, kết quả vẫn còn hạn chế. Thuật toán gặp khó khăn trong việc phát hiện một số đối tượng, ví dụ như quả bóng bay màu đỏ, có thể do màu sắc tương đồng với nền hoặc sự thay đổi về góc nhìn/kích thước không nằm trong dải tỉ lệ thử nghiệm.
 * Điều này cho thấy giới hạn của Template Matching khi đối mặt với các biến thể phức tạp về hình dạng, màu sắc và bối cảnh.
 
 ## Cài đặt và Sử dụng
