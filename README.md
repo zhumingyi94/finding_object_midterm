@@ -24,7 +24,7 @@ Repository này chứa mã nguồn và báo cáo cho bài thực hành môn Xử
 │           ├── bow_tie.png
 │           ├── car.png
 │           └── ... (các template khác)
-├── notebooks/             # Chứa Jupyter Notebooks để thử nghiệm và trực quan hóa [source: 10]
+├── notebooks/             # Chứa Jupyter Notebooks để thử nghiệm và trực quan hóa 
 │   └── finding_01.ipynb
 ├── src/                   # Mã nguồn Python chính
 │   ├── finding/           # Các module thuật toán tìm kiếm
